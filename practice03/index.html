@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice03</title>
+
+    <script>
+
+        var coolArray = ["one", true, 1, "two", false, 2, "three", true, 3];
+
+        function typeSort(array) {
+            var sortedArray = [];
+            var stringArray = [];
+            var numArray = [];
+            var boolArray = [];
+            for (var i in array) {
+                if (typeof (array[i]) === "string") {
+                    stringArray.push(array[i]);
+                }
+                else if (typeof (array[i]) === "number") {
+                    numArray.push(array[i]);
+                }
+                else if (typeof (array[i]) === "boolean") {
+                    boolArray.push(array[i]);
+                }
+            }
+            sortedArray.push(stringArray, numArray, boolArray)
+            console.log(sortedArray);
+        }
+        typeSort(coolArray);
+
+    </script>
+
+
+</head>
+<body>
+<h1>practice03</h1>
+</body>
+</html>
+
+
+<!--## One to Multi-->
+
+<!--Build a function that sorts an array into a multidimensional array grouped by data type-->
+
+<!-- - Write a function that takes one parameter-->
+<!-- - Parameter 1 - An array of anything-->
+<!-- - The function should output a multidimensional array grouped by data type-->
+<!-- - Example:-->
+<!-- - `var myArray = ['hello', 34, true, false, 'goodbye', 56, 12, '25', true];`-->
+<!-- - `groupArray(myArray);`-->
+<!-- - Output - `[['hello, 'goodbye', '25'], [34, 56, 12], [true, false, true]]`-->
